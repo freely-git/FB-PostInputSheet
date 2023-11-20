@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "FB-收集高赞贴文到谷歌表格",
+  "version": "1.0",
+  "description": "A Chrome extension with a floating window.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage"
+  ],
+  "action": {
+    "default_icon": "icon/favicon.png"
+  },
+  "icons": {
+    "48": "icon/favicon.png",
+    "64": "icon/favicon.png",
+    "128": "icon/favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": [
+        "js/jquery-3.7.1.min.js",
+        "js/bootstrap.bundle.min.js",
+        "js/createElement.js",
+        "js/content.js"
+      ],
+      "css": [
+        "css/style.css",
+        "css/bootstrap.min.css"
+      ]
+    }
+  ]
+}
