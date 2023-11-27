@@ -25,6 +25,7 @@
         "js/jquery-3.7.1.min.js",
         "js/bootstrap.bundle.min.js",
         "js/createElement.js",
+        "js/API.js",
         "js/content.js"
       ],
       "css": [

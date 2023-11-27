@@ -29,7 +29,7 @@
 .btn_css:hover {
     border-radius: 50%;
     background-color: #1047ff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3) ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     color: #fff;
 
 }
@@ -37,6 +37,20 @@
 #collapseWidthExample {
     background-color: #fff;
     
+}
+
+#loading {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.572);
+}
+
+#loading div {
+    position: absolute;
+    top: 48%;
 }
 
 

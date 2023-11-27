@@ -9,6 +9,11 @@ floatingWindow.innerHTML = `
     </div>
     <div style="min-height: 388px;">
         <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="d-flex justify-content-center" id="loading" style="visibility:hidden;">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
             <div class="card card-body"  style="width: 300px;">
                 <div class="mb-3">  
                     <label for="name" class="form-label">管理员名</label>
@@ -18,16 +23,17 @@ floatingWindow.innerHTML = `
                     <label for="webUrl" class="form-label">谷歌web应用链接</label>
                     <input type="text" class="form-control" id="webUrl" placeholder="填写谷歌部署的web应用链接">
                 </div>
-                <div class="mb-3">
-                    <label for="postLink" class="form-label">贴文链接</label>
+                <label for="postLink" class="form-label">贴文链接</label> 
+                <div class="input-group mb-3">
                     <input type="text" class="form-control" id="postLink" placeholder="填写贴文链接">
+                    <button class="btn btn-outline-primary" type="button"  id="autoGet">自动获取</button>
                 </div>
                 <div class="mb-3">
                     <label for="picLink" class="form-label">贴文图片链接</label>
                     <input type="text" class="form-control" id="picLink" placeholder="填写图片链接">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">贴文原文内容</label>
+                    <label for="exampleFormControlTextarea1" class="form-label">贴文引导语</label>
                     <textarea class="form-control" id="content" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
@@ -43,7 +49,6 @@ floatingWindow.innerHTML = `
                     </div>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-outline-primary" id="autoGet">自动获取</button>
                     <button type="button" class="btn btn-outline-primary" id="submit">提交</button>
                     <button type="button" class="btn btn-outline-danger" id="clear">清除缓存</button>
                 </div>
