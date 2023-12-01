@@ -1,38 +1,29 @@
 {
-  "manifest_version": 3,
-  "name": "FB-收集高赞贴文到谷歌表格",
-  "version": "1.0",
-  "description": "A Chrome extension with a floating window.",
-  "permissions": [
-    "activeTab",
-    "contextMenus",
-    "storage"
-  ],
-  "action": {
-    "default_icon": "icon/favicon.png"
-  },
-  "icons": {
-    "48": "icon/favicon.png",
-    "64": "icon/favicon.png",
-    "128": "icon/favicon.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.facebook.com/*"
-      ],
-      "exclude_matches": ["*://*.facebook.com/watch/saved?self_page_thunder_extension"],
-      "js": [
-        "js/jquery-3.7.1.min.js",
-        "js/bootstrap.bundle.min.js",
-        "js/createElement.js",
-        "js/API.js",
-        "js/content.js"
-      ],
-      "css": [
-        "css/style.css",
-        "css/bootstrap.min.css"
-      ]
-    }
-  ]
+    "manifest_version": 3,
+    "name": "FB-收集高赞贴文到谷歌表格",
+    "description": "A Chrome extension with a floating window",
+    "version": "1.1",
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "storage",
+        "identity"
+    ],
+    "icons": {
+        "16" : "image/icon.png",
+        "48" : "image/icon.png",
+        "128" : "image/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.facebook.com/*"],
+            "exclude_matches": ["*://*.facebook.com/watch/saved?self_page_thunder_extension"],
+            "js": [
+                "js/contentScript.js",
+                "js/647.js",
+                "js/372.js",
+                "js/newTab.js"
+            ]
+        }
+    ]
 }
