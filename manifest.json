@@ -21,6 +21,7 @@
       "matches": [
         "*://*.facebook.com/*"
       ],
+      "exclude_matches": ["*://*.facebook.com/watch/saved?self_page_thunder_extension"],
       "js": [
         "js/jquery-3.7.1.min.js",
         "js/bootstrap.bundle.min.js",
